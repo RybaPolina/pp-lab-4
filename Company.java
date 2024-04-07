@@ -20,7 +20,11 @@ public class Company{
         System.out.println(employees[3].toString());
 
         employees[3].setSalary(12500.0); */
-       
+        for (Employee employee : employees){
+            double raise = employee.getSalary() + 500.0;
+            employee.setSalary(raise); 
+        }
+
         int workers = 0;
         for (Employee employee : employees){
             if (!(employee instanceof Manager)) {
@@ -29,7 +33,9 @@ public class Company{
         }
 
        ((Manager) employees[0]).setNumberOfSubordinates(workers);
+       ((Manager) employees[5]).setNumberOfSubordinates(workers);
        employees[0].setSalary(7500.0);
+       employees[5].setSalary(7500.0);
 
        System.out.println("Dane pracowników: ");
        for (Employee employee : employees) {
