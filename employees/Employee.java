@@ -1,3 +1,4 @@
+package employees;
 public class Employee {
 
     private String fullName;
@@ -22,6 +23,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee: " + fullName + " Salary: " + salary ;
+        return "Employee: " + fullName + ", Salary: " + salary ;
     }
 }
