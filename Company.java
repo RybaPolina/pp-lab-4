@@ -19,9 +19,19 @@ public class Company{
 
         employees[3].setSalary(12500.0); */
 
-        System.out.println("Dane pracowników: ");
-        for (Employee employee : employees) {
-            System.out.println(employee.toString());
+        int workers = 0;
+        for (Employee employee : employees){
+            if (!(employee instanceof Manager)) {
+                workers ++;
+            }
         }
+
+       ((Manager) employees[0]).setNumberOfSubordinates(workers);
+       employees[0].setSalary(7500.0);
+
+       System.out.println("Dane pracowników: ");
+       for (Employee employee : employees) {
+           System.out.println(employee.toString());
+       }
     }
 }
